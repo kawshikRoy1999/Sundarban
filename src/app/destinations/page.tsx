@@ -25,7 +25,7 @@ const DESTINATION_DETAILS = [
     highlights: ["Mangrove Interpretation Museum", "Crocodile Pond", "Freshwater Drinking Spot", "Bird Sanctuary"],
     bestTime: "Early morning (7 AM - 10 AM) & late afternoon",
     wildlife: "Spotted deer, wild boars, Brahminy kites, kingfishers, saltwater crocodiles",
-    imageUrl: "https://images.unsplash.com/photo-1614350292382-c448d0110dfa?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-DJ4vjcD0s0I?q=100&w=3840&auto=format&fit=crop",
   },
   {
     id: "2",
@@ -37,7 +37,7 @@ const DESTINATION_DETAILS = [
     highlights: ["Sweet-water Watering Hole", "Tiger Pugmark Trails", "Covered Observation Deck", "Creek Safari Route"],
     bestTime: "Mid-day & late afternoon during low tide",
     wildlife: "Royal Bengal Tiger, spotted deer, rhesus macaques, monitor lizards, fishing cats",
-    imageUrl: "https://images.unsplash.com/photo-1615824996195-f780bba7cfab?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-nZ2cEh8Qzcg?q=100&w=3840&auto=format&fit=crop",
   },
   {
     id: "3",
@@ -49,7 +49,7 @@ const DESTINATION_DETAILS = [
     highlights: ["496m Elevated Canopy Walk", "Deer Enclosure", "Dense Forest Viewpoint", "High-tide Wildlife Viewing"],
     bestTime: "Morning between 9 AM and 1 PM",
     wildlife: "Spotted deer, wild boars, mangrove whistling ducks, eagles, monitor lizards",
-    imageUrl: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-KNJdjEdfa-g?q=100&w=3840&auto=format&fit=crop",
   },
   {
     id: "4",
@@ -61,7 +61,7 @@ const DESTINATION_DETAILS = [
     highlights: ["400-Year-Old Shiva Temple Ruins", "Sweetwater Pond", "Core Forest Boundary", "Deep Delta Creek Safari"],
     bestTime: "Winter months (Nov - Feb), tide-dependent",
     wildlife: "Royal Bengal Tiger, estuarine crocodiles, white-bellied sea eagles, otters",
-    imageUrl: "https://images.unsplash.com/photo-1561731216-c3a4d4b57e23?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-MdHHBF6i-MI?q=100&w=3840&auto=format&fit=crop",
   },
 ];
 

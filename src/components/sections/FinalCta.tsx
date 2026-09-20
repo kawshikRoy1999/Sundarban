@@ -16,7 +16,7 @@ export function FinalCta() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1561731216-c3a4d4b57e23?q=80&w=2000&auto=format&fit=crop')",
+            "url('https://images.unsplash.com/photo-KNJdjEdfa-g?q=100&w=3840&auto=format&fit=crop')",
         }}
       />
       <div className="absolute inset-0 bg-primary/85" />

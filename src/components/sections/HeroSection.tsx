@@ -9,9 +9,9 @@ import { Container } from "@/components/ui/Container";
 import { FloatingElement, MagneticButton } from "@/components/ui/Animations";
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1615824996195-f780bba7cfab?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1561731216-c3a4d4b57e23?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1614350292382-c448d0110dfa?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-MdHHBF6i-MI?q=100&w=3840&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-Gz2oZP23j1s?q=100&w=3840&auto=format&fit=crop",
+  "https://images.unsplash.com/photo--iZV3CqT7LM?q=100&w=3840&auto=format&fit=crop",
 ];
 
 export function HeroSection() {
