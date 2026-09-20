@@ -42,7 +42,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square lg:aspect-auto lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-cNXyaIFyTNg?q=100&w=3840&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1615963244664-5b845b2025ee?q=100&w=3840&auto=format&fit=crop"
                 alt="Local boat navigating Sundarban mangrove waterways"
                 fill
                 className="object-cover"

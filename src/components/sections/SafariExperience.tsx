@@ -11,32 +11,32 @@ const SAFARI_ITEMS = [
   {
     title: "Mangrove Waterways",
     description: "Glide through narrow tidal creeks lined with ancient Sundari trees",
-    image: "https://images.unsplash.com/photo-K1h1ziJqtNc?q=100&w=3840&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=100&w=3840&auto=format&fit=crop",
   },
   {
     title: "Wildlife Observation",
     description: "Spot the Royal Bengal Tiger, saltwater crocodile, and over 260 bird species",
-    image: "https://images.unsplash.com/photo-cNXyaIFyTNg?q=100&w=3840&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1605092676920-8ac5ae40c7c8?q=100&w=3840&auto=format&fit=crop",
   },
   {
     title: "Forest Safari",
     description: "Deep creek expeditions where the mangroves grow thickest and wildest",
-    image: "https://images.unsplash.com/photo-DJ4vjcD0s0I?q=100&w=3840&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1567696911980-2eed69a46042?q=100&w=3840&auto=format&fit=crop",
   },
   {
     title: "Watch Towers",
     description: "Panoramic views from Sajnekhali, Sudhanyakhali, and Dobanki towers",
-    image: "https://images.unsplash.com/photo-nZ2cEh8Qzcg?q=100&w=3840&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=100&w=3840&auto=format&fit=crop",
   },
   {
     title: "Village Life",
     description: "Meet the resilient communities who have lived alongside tigers for generations",
-    image: "https://images.unsplash.com/photo-KNJdjEdfa-g?q=100&w=3840&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1500463959177-e0869687df26?q=100&w=3840&auto=format&fit=crop",
   },
   {
     title: "Sunset Boat Rides",
     description: "Golden hour on the river — the most magical moment in the delta",
-    image: "https://images.unsplash.com/photo-MdHHBF6i-MI?q=100&w=3840&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1615963244664-5b845b2025ee?q=100&w=3840&auto=format&fit=crop",
   },
 ];
 
