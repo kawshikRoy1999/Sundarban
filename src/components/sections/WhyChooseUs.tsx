@@ -39,52 +39,59 @@ const STATS = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 md:py-32 bg-background overflow-hidden">
+    <section className="py-24 md:py-36 bg-background overflow-hidden border-t border-border/50">
       <Container>
-        <FadeIn>
-          <SectionHeading
-            title="Travel With Confidence"
-            subtitle="We believe in honest tourism. No fake urgency, no fabricated reviews — just genuine experiences in the wild."
-            eyebrow="Why Choose Us"
-            centered
-            className="mb-16"
-          />
-        </FadeIn>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          
+          {/* Left Column (Sticky) */}
+          <div className="lg:col-span-5 relative">
+            <div className="sticky top-32">
+              <FadeIn>
+                <SectionHeading
+                  title="Travel With Confidence."
+                  subtitle="We believe in honest tourism. No fake urgency, no fabricated reviews — just genuine experiences in the wild."
+                  eyebrow="Our Ethos"
+                />
+              </FadeIn>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {FEATURES.map((feature, idx) => (
-            <StaggerItem key={idx}>
-              <motion.div
-                whileHover={{ y: -6, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                className="flex flex-col items-center text-center p-8 rounded-3xl bg-card border border-primary/5 shadow-premium hover:shadow-premium-hover transition-all duration-500 h-full relative overflow-hidden group"
-              >
-                {/* Subtle gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-500 relative z-10">
-                  {feature.icon}
+              {/* Animated Stats inside the sticky sidebar */}
+              <FadeIn>
+                <div className="grid grid-cols-2 gap-x-8 gap-y-12 mt-16 pt-12 border-t border-border/60">
+                  {STATS.map((stat, idx) => (
+                    <div key={idx}>
+                      <p className="text-4xl lg:text-5xl font-bold font-heading text-primary mb-3">
+                        <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                      </p>
+                      <p className="text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase">{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="font-heading text-lg font-bold mb-3 text-foreground">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-
-        {/* Animated Stats */}
-        <FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 px-8 rounded-3xl bg-primary text-white">
-            {STATS.map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold font-heading text-accent">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                </p>
-                <p className="text-sm text-white/60 mt-2">{stat.label}</p>
-              </div>
-            ))}
+              </FadeIn>
+            </div>
           </div>
-        </FadeIn>
+
+          {/* Right Column (List) */}
+          <div className="lg:col-span-7 mt-8 lg:mt-0">
+            <StaggerContainer>
+              <div className="flex flex-col border-t border-border/60">
+                {FEATURES.map((feature, idx) => (
+                  <StaggerItem key={idx}>
+                    <div className="group flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10 py-10 sm:py-14 border-b border-border/60 hover:border-primary/40 transition-colors duration-500">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full border border-border/50 flex items-center justify-center text-accent/50 group-hover:bg-accent/5 group-hover:text-accent group-hover:border-accent/20 group-hover:scale-105 transition-all duration-500">
+                        {feature.icon}
+                      </div>
+                      <div>
+                        <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-3 text-foreground tracking-tight">{feature.title}</h3>
+                        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">{feature.description}</p>
+                      </div>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </div>
+            </StaggerContainer>
+          </div>
+          
+        </div>
       </Container>
     </section>
   );
