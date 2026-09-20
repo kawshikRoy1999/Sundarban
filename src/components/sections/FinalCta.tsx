@@ -30,10 +30,10 @@ export function FinalCta() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
               Your Sundarban Story
               <br />
-              <span className="text-accent">Starts Here.</span>
+              <span className="text-accent font-medium tracking-normal relative z-10">Starts Here.</span>
             </h2>
             <p className="text-white/75 text-lg md:text-xl mb-4 max-w-2xl mx-auto leading-relaxed">
               Tell us your preferred dates and group size. We&apos;ll craft the perfect experience

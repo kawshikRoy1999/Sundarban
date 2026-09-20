@@ -56,10 +56,13 @@ export function WhyChooseUs() {
             <StaggerItem key={idx}>
               <motion.div
                 whileHover={{ y: -6, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="flex flex-col items-center text-center p-8 rounded-3xl bg-card border border-border/50 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300 h-full"
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                className="flex flex-col items-center text-center p-8 rounded-3xl bg-card border border-primary/5 shadow-premium hover:shadow-premium-hover transition-all duration-500 h-full relative overflow-hidden group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                {/* Subtle gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-500 relative z-10">
                   {feature.icon}
                 </div>
                 <h3 className="font-heading text-lg font-bold mb-3 text-foreground">{feature.title}</h3>

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { FloatingElement } from "@/components/ui/Animations";
+import { FloatingElement, MagneticButton } from "@/components/ui/Animations";
 
 const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1615824996195-f780bba7cfab?q=80&w=2000&auto=format&fit=crop",
@@ -28,13 +28,16 @@ export function HeroSection() {
       <AnimatePresence mode="popLayout">
         <motion.div
           key={current}
-          initial={{ scale: 1.15, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: [0.25, 0.4, 0.25, 1] }}
-          className="absolute inset-0 z-0"
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="absolute inset-0 z-0 overflow-hidden"
         >
-          <div
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 10, ease: "easeOut" }}
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url('${HERO_IMAGES[current]}')` }}
           />
@@ -92,19 +95,23 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4"
         >
-          <Button size="lg" className="text-base px-8 shadow-lg shadow-primary/30 w-full sm:w-auto" asChild>
-            <Link href="/packages">Explore Tours</Link>
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-base px-8 text-white border-white/30 hover:bg-white/10 backdrop-blur-sm w-full sm:w-auto"
-            asChild
-          >
-            <Link href="/contact">Plan My Trip</Link>
-          </Button>
+          <MagneticButton>
+            <Button size="lg" className="text-base px-8 shadow-lg shadow-primary/30 w-full sm:w-auto" asChild>
+              <Link href="/packages">Explore Tours</Link>
+            </Button>
+          </MagneticButton>
+          <MagneticButton>
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-base px-8 text-white border-white/30 hover:bg-white/10 backdrop-blur-sm w-full sm:w-auto"
+              asChild
+            >
+              <Link href="/contact">Plan My Trip</Link>
+            </Button>
+          </MagneticButton>
         </motion.div>
 
         {/* Micro Trust */}

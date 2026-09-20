@@ -27,20 +27,24 @@ export const metadata: Metadata = {
   },
 };
 
+import { SmoothScroll } from "@/components/ui/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className={cn(hind.variable, notoSerif.variable, "min-h-screen bg-background font-sans antialiased text-foreground flex flex-col")}>
-        <Navbar />
-        <main className="flex-1 w-full pb-16 lg:pb-0">
-          {children}
-        </main>
-        <Footer />
-        <MobileBottomBar />
+        <SmoothScroll>
+          <Navbar />
+          <main className="flex-1 w-full pb-16 lg:pb-0">
+            {children}
+          </main>
+          <Footer />
+          <MobileBottomBar />
+        </SmoothScroll>
       </body>
     </html>
   );

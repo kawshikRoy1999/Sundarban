@@ -17,16 +17,19 @@ export function PackageCard({ packageData }: PackageCardProps) {
   return (
     <motion.div
       whileHover={{ y: -8 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-shadow duration-500"
+      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+      className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-primary/5 shadow-premium hover:shadow-premium-hover transition-all duration-500 relative"
     >
+      {/* Subtle inner border for depth */}
+      <div className="absolute inset-0 rounded-2xl border border-white/40 z-20 pointer-events-none mix-blend-overlay" />
+
       {/* Image Area */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
         <Image
           src={packageData.imageUrl}
           alt={packageData.name}
           fill
-          className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+          className="object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {packageData.isPopular && (
@@ -52,11 +55,11 @@ export function PackageCard({ packageData }: PackageCardProps) {
           <span className="text-xs font-normal text-muted-foreground ml-1">/ person</span>
         </div>
 
-        <h3 className="font-heading text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+        <h3 className="font-heading text-xl font-bold text-foreground mb-3 tracking-tight group-hover:text-primary transition-colors duration-500">
           {packageData.name}
         </h3>
 
-        <p className="text-muted-foreground text-sm line-clamp-2 mb-5 flex-1">
+        <p className="text-muted-foreground text-[15px] leading-relaxed line-clamp-2 mb-6 flex-1">
           {packageData.shortDescription}
         </p>
 
