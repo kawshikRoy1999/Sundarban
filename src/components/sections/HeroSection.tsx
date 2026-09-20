@@ -23,7 +23,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden pt-20 pb-16">
       {/* Animated Background Slideshow */}
       <AnimatePresence mode="popLayout">
         <motion.div
@@ -129,13 +129,14 @@ export function HeroSection() {
       </FloatingElement>
 
       {/* Image indicators */}
-      <div className="absolute bottom-12 right-8 z-20 hidden md:flex gap-2">
+      <div className="absolute bottom-6 md:bottom-12 right-6 md:right-8 z-20 flex gap-2">
         {HERO_IMAGES.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-12 h-1 rounded-full transition-all duration-500 ${
-              i === current ? "bg-accent w-16" : "bg-white/30"
+            aria-label={`Go to slide ${i + 1}`}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              i === current ? "bg-accent w-10 md:w-14" : "bg-white/40 w-4 md:w-8 hover:bg-white/70"
             }`}
           />
         ))}

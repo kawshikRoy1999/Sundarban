@@ -9,7 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { DESTINATIONS } from "@/data/destinations";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/Animations";
 
-export function DestinationsSection() {
+export function DestinationsSection({ showViewAll = true }: { showViewAll?: boolean }) {
   return (
     <section className="py-20 md:py-32 bg-muted/20 overflow-hidden">
       <Container>
@@ -20,18 +20,20 @@ export function DestinationsSection() {
               subtitle="The watchtowers, ruins, and waterways that define every itinerary."
               eyebrow="Destinations"
             />
-            <Link
-              href="/destinations"
-              className="text-accent font-medium hover:text-accent/80 transition-colors inline-flex items-center gap-2 shrink-0 pb-2 md:pb-4 border-b border-accent/30 group"
-            >
-              View All Places
-              <motion.span
-                animate={{ x: [0, 4, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            {showViewAll && (
+              <Link
+                href="/destinations"
+                className="text-accent font-medium hover:text-accent/80 transition-colors inline-flex items-center gap-2 shrink-0 pb-2 md:pb-4 border-b border-accent/30 group"
               >
-                →
-              </motion.span>
-            </Link>
+                View All Places
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                >
+                  →
+                </motion.span>
+              </Link>
+            )}
           </div>
         </FadeIn>
 
@@ -39,7 +41,7 @@ export function DestinationsSection() {
           {DESTINATIONS.map((dest) => (
             <StaggerItem
               key={dest.id}
-              className="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-muted cursor-pointer"
+              className="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-muted cursor-pointer shadow-lg"
             >
               <Image
                 src={dest.imageUrl}
@@ -48,18 +50,18 @@ export function DestinationsSection() {
                 className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-90 transition-opacity duration-500" />
 
               {/* Number */}
-              <span className="absolute top-4 right-4 text-5xl font-heading font-bold text-white/10 transition-colors group-hover:text-accent/20">
+              <span className="absolute top-4 right-4 text-5xl font-heading font-bold text-white/15 transition-colors group-hover:text-accent/30 select-none">
                 0{dest.id}
               </span>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-end">
-                <h3 className="font-heading text-2xl font-bold text-white mb-2 transform transition-transform duration-500 group-hover:-translate-y-3">
+                <h3 className="font-heading text-2xl font-bold text-white mb-2 transform transition-transform duration-500 md:group-hover:-translate-y-2">
                   {dest.name}
                 </h3>
-                <p className="text-white/80 text-sm line-clamp-3 opacity-0 transform translate-y-6 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                <p className="text-white/80 text-sm line-clamp-3 opacity-95 md:opacity-0 md:transform md:translate-y-6 transition-all duration-500 md:group-hover:opacity-100 md:group-hover:translate-y-0">
                   {dest.description}
                 </p>
               </div>

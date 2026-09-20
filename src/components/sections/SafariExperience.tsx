@@ -43,23 +43,54 @@ const SAFARI_ITEMS = [
 export function SafariExperience() {
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const scroll = (direction: "left" | "right") => {
+    if (containerRef.current) {
+      const scrollAmount = direction === "left" ? -340 : 340;
+      containerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="py-20 md:py-32 bg-primary text-white overflow-hidden">
       <Container>
         <FadeIn>
-          <SectionHeading
-            title="The Safari Experience"
-            subtitle="Six ways to discover the untamed beauty of the world's largest mangrove forest."
-            eyebrow="What Awaits You"
-            centered
-            className="mb-16 [&_h2]:text-white [&_p]:text-white/70"
-          />
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
+            <SectionHeading
+              title="The Safari Experience"
+              subtitle="Six authentic ways to discover the untamed beauty of the world's largest mangrove forest."
+              eyebrow="What Awaits You"
+              className="[&_h2]:text-white [&_p]:text-white/70"
+            />
+            {/* Desktop Navigation Arrows */}
+            <div className="hidden md:flex items-center gap-3">
+              <button
+                onClick={() => scroll("left")}
+                className="w-12 h-12 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors text-white active:scale-95"
+                aria-label="Scroll left"
+              >
+                ←
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="w-12 h-12 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors text-white active:scale-95"
+                aria-label="Scroll right"
+              >
+                →
+              </button>
+            </div>
+          </div>
         </FadeIn>
       </Container>
 
       {/* Horizontal Scroll Cards */}
-      <div ref={containerRef} className="overflow-x-auto scrollbar-hide">
-        <div className="flex gap-6 px-4 md:px-8 lg:px-16 pb-4 min-w-max">
+      <div 
+        ref={containerRef} 
+        className="overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-4 md:px-8 lg:px-16"
+        tabIndex={0}
+        role="region"
+        aria-label="Safari Experiences Carousel"
+      >
+        <div className="flex gap-6 min-w-max">
           {SAFARI_ITEMS.map((item, idx) => (
             <motion.div
               key={idx}
@@ -68,7 +99,7 @@ export function SafariExperience() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="relative w-[300px] md:w-[340px] flex-shrink-0 rounded-2xl overflow-hidden group cursor-pointer"
+              className="relative w-[280px] sm:w-[320px] md:w-[360px] flex-shrink-0 rounded-3xl overflow-hidden group cursor-pointer shadow-xl shadow-black/20"
             >
               <div className="relative aspect-[3/4]">
                 <Image
@@ -76,12 +107,12 @@ export function SafariExperience() {
                   alt={item.title}
                   fill
                   className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                  sizes="340px"
+                  sizes="360px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
 
                 {/* Number */}
-                <span className="absolute top-4 left-4 text-6xl font-heading font-bold text-white/10">
+                <span className="absolute top-4 left-5 text-5xl md:text-6xl font-heading font-bold text-white/15 select-none">
                   0{idx + 1}
                 </span>
 
@@ -90,7 +121,7 @@ export function SafariExperience() {
                   <h3 className="font-heading text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-white/70 text-sm leading-relaxed opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <p className="text-white/80 text-sm leading-relaxed opacity-95 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300">
                     {item.description}
                   </p>
                 </div>
@@ -100,22 +131,11 @@ export function SafariExperience() {
         </div>
       </div>
 
-      {/* Scroll hint */}
-      <Container className="mt-8">
-        <div className="flex items-center gap-3 text-white/40 text-sm justify-center md:justify-end">
-          <motion.span
-            animate={{ x: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          >
-            ←
-          </motion.span>
-          <span>Scroll to explore</span>
-          <motion.span
-            animate={{ x: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          >
-            →
-          </motion.span>
+      {/* Mobile scroll hint */}
+      <Container className="mt-6 md:hidden">
+        <div className="flex items-center gap-2 text-white/50 text-xs justify-center">
+          <span>Swipe horizontally to explore more</span>
+          <span>→</span>
         </div>
       </Container>
     </section>
