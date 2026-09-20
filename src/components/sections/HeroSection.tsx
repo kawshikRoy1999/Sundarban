@@ -9,9 +9,8 @@ import { Container } from "@/components/ui/Container";
 import { FloatingElement, MagneticButton } from "@/components/ui/Animations";
 
 const HERO_IMAGES = [
-  "https://upload.wikimedia.org/wikipedia/commons/1/17/Tiger_in_Ranthambhore.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/7/7b/Sundarbans_National_Park%2C_India.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger._Huge_bengal_tiger_male_from_national_park_in_India._Real_wildlife.jpg",
+  "/images/hero/hero-1.png",
+  "/images/hero/hero-2.png",
 ];
 
 export function HeroSection() {
