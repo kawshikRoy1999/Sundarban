@@ -7,10 +7,10 @@ import { Container } from "@/components/ui/Container";
 import { AnimatedCounter } from "@/components/ui/Animations";
 
 const TRUST_ITEMS = [
-  { icon: <Map className="w-5 h-5" />, title: "Local Tour Experience" },
-  { icon: <Star className="w-5 h-5" />, title: "Verified Customer Reviews" },
-  { icon: <ShieldCheck className="w-5 h-5" />, title: "Transparent Packages" },
-  { icon: <MessageCircle className="w-5 h-5" />, title: "Direct WhatsApp Support" },
+  { icon: <Map className="w-5 h-5" />, title: "Local Tour Experience", subtitle: "স্থানীয় ভ্রমণ অভিজ্ঞতা" },
+  { icon: <Star className="w-5 h-5" />, title: "Verified Reviews", subtitle: "যাচাইকৃত মতামত" },
+  { icon: <ShieldCheck className="w-5 h-5" />, title: "Transparent Packages", subtitle: "স্বচ্ছ প্যাকেজ" },
+  { icon: <MessageCircle className="w-5 h-5" />, title: "Direct WhatsApp Support", subtitle: "সরাসরি হোয়াটসঅ্যাপ সাপোর্ট" },
 ];
 
 export function TrustStrip() {
@@ -28,7 +28,10 @@ export function TrustStrip() {
               className="flex items-center justify-center md:justify-start gap-3 group"
             >
               <span className="text-accent group-hover:scale-110 transition-transform">{item.icon}</span>
-              <span className="font-medium">{item.title}</span>
+              <div className="flex flex-col">
+                <span className="font-medium text-[13px] sm:text-sm">{item.title}</span>
+                <span className="text-[10px] sm:text-[11px] text-white/60 font-sans">{item.subtitle}</span>
+              </div>
             </motion.div>
           ))}
         </div>

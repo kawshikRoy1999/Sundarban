@@ -54,7 +54,7 @@ export function HeroSection() {
           className="inline-flex items-center gap-2 border border-white/20 bg-white/5 backdrop-blur-sm rounded-full px-5 py-2 mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-white/90 text-sm font-medium tracking-widest uppercase">The Wild Side of Bengal</span>
+          <span className="text-white/90 text-sm font-medium tracking-widest uppercase">The Wild Side of Bengal | বাংলার বন্য রূপ</span>
         </motion.div>
 
         <div className="overflow-hidden">
@@ -92,15 +92,15 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex flex-col sm:flex-row items-center gap-4"
+          className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
         >
-          <Button size="lg" className="text-base px-8 shadow-lg shadow-primary/30" asChild>
+          <Button size="lg" className="text-base px-8 shadow-lg shadow-primary/30 w-full sm:w-auto" asChild>
             <Link href="/packages">Explore Tours</Link>
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="text-base px-8 text-white border-white/30 hover:bg-white/10 backdrop-blur-sm"
+            className="text-base px-8 text-white border-white/30 hover:bg-white/10 backdrop-blur-sm w-full sm:w-auto"
             asChild
           >
             <Link href="/contact">Plan My Trip</Link>

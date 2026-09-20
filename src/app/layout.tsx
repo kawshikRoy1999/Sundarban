@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Hind_Siliguri, Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const hind = Hind_Siliguri({ weight: ['300', '400', '500', '600', '700'], subsets: ["latin", "bengali"], variable: "--font-sans" });
+const notoSerif = Noto_Serif_Bengali({ weight: ['400', '500', '600', '700', '800'], subsets: ["latin", "bengali"], variable: "--font-heading" });
 
 export const metadata: Metadata = {
   title: {
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={cn(inter.variable, playfair.variable, "min-h-screen bg-background font-sans antialiased text-foreground flex flex-col")}>
+      <body className={cn(hind.variable, notoSerif.variable, "min-h-screen bg-background font-sans antialiased text-foreground flex flex-col")}>
         <Navbar />
         <main className="flex-1 w-full pb-16 lg:pb-0">
           {children}

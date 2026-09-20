@@ -35,9 +35,12 @@ export function FinalCta() {
               <br />
               <span className="text-accent">Starts Here.</span>
             </h2>
-            <p className="text-white/75 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/75 text-lg md:text-xl mb-4 max-w-2xl mx-auto leading-relaxed">
               Tell us your preferred dates and group size. We&apos;ll craft the perfect experience
               for you — honestly and transparently.
+            </p>
+            <p className="text-accent/80 text-base md:text-lg mb-12 max-w-2xl mx-auto font-sans leading-relaxed">
+              আপনার ভ্রমণের তারিখ ও সদস্য সংখ্যা জানান। আমরা আপনার জন্য নিখুঁত এবং স্বচ্ছ একটি ভ্রমণের আয়োজন করব।
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
