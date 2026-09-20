@@ -9,9 +9,9 @@ import { Container } from "@/components/ui/Container";
 import { FloatingElement, MagneticButton } from "@/components/ui/Animations";
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1615824996195-f780bba7cfab?q=100&w=3840&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1519659528534-7fd733a832a0?q=100&w=3840&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1549480017-d76466a4b7e8?q=100&w=3840&auto=format&fit=crop",
+  "https://upload.wikimedia.org/wikipedia/commons/1/17/Tiger_in_Ranthambhore.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/7/7b/Sundarbans_National_Park%2C_India.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger._Huge_bengal_tiger_male_from_national_park_in_India._Real_wildlife.jpg",
 ];
 
 export function HeroSection() {

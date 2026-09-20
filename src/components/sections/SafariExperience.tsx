@@ -11,32 +11,32 @@ const SAFARI_ITEMS = [
   {
     title: "Mangrove Waterways",
     description: "Glide through narrow tidal creeks lined with ancient Sundari trees",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=100&w=3840&auto=format&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Sundarbans_river_network.jpg",
   },
   {
     title: "Wildlife Observation",
     description: "Spot the Royal Bengal Tiger, saltwater crocodile, and over 260 bird species",
-    image: "https://images.unsplash.com/photo-1605092676920-8ac5ae40c7c8?q=100&w=3840&auto=format&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Panthera_tigris_tigris.jpg",
   },
   {
     title: "Forest Safari",
     description: "Deep creek expeditions where the mangroves grow thickest and wildest",
-    image: "https://images.unsplash.com/photo-1567696911980-2eed69a46042?q=100&w=3840&auto=format&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg",
   },
   {
     title: "Watch Towers",
     description: "Panoramic views from Sajnekhali, Sudhanyakhali, and Dobanki towers",
-    image: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=100&w=3840&auto=format&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/de/Sundarban_Tiger_Reserve.jpg",
   },
   {
     title: "Village Life",
     description: "Meet the resilient communities who have lived alongside tigers for generations",
-    image: "https://images.unsplash.com/photo-1500463959177-e0869687df26?q=100&w=3840&auto=format&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Sundarbans_mangrove.jpg",
   },
   {
     title: "Sunset Boat Rides",
     description: "Golden hour on the river — the most magical moment in the delta",
-    image: "https://images.unsplash.com/photo-1615963244664-5b845b2025ee?q=100&w=3840&auto=format&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Tiger_in_Ranthambhore.jpg",
   },
 ];
 

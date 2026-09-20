@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 };
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=100&w=3840&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1605092676920-8ac5ae40c7c8?q=100&w=3840&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1567696911980-2eed69a46042?q=100&w=3840&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=100&w=3840&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1500463959177-e0869687df26?q=100&w=3840&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1615963244664-5b845b2025ee?q=100&w=3840&auto=format&fit=crop",
+  "https://upload.wikimedia.org/wikipedia/commons/7/7b/Sundarbans_National_Park%2C_India.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger._Huge_bengal_tiger_male_from_national_park_in_India._Real_wildlife.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/30/Sundarbans_river_network.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/b/b9/Panthera_tigris_tigris.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/d/de/Sundarban_Tiger_Reserve.jpg",
 ];
 
 export default function GalleryPage() {

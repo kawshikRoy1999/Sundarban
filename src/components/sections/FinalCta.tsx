@@ -16,7 +16,7 @@ export function FinalCta() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1632807515528-ddd9967acb94?q=100&w=3840&auto=format&fit=crop')",
+            "url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Sundarbans_mangrove.jpg')",
         }}
       />
       <div className="absolute inset-0 bg-primary/85" />

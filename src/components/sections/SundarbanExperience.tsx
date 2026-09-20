@@ -23,7 +23,7 @@ export function SundarbanExperience() {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
               <motion.div style={{ y: imgY }} className="absolute inset-[-10%]">
                 <Image
-                  src="https://images.unsplash.com/photo-1632807515528-ddd9967acb94?q=100&w=3840&auto=format&fit=crop"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Sundarbans_National_Park%2C_India.jpg"
                   alt="Sundarban mangrove waterway at golden hour"
                   fill
                   className="object-cover"
